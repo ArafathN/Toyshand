@@ -1,0 +1,30 @@
+current directory: C:/Projects/Toyshand/Toyshand/vendor/bundle/ruby/2.3.0/gems/bootsnap-1.4.8/ext/bootsnap
+C:/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20200929-24896-12h4wew.rb extconf.rb
+creating Makefile
+
+current directory: C:/Projects/Toyshand/Toyshand/vendor/bundle/ruby/2.3.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: C:/Projects/Toyshand/Toyshand/vendor/bundle/ruby/2.3.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR="
+generating bootsnap-i386-mingw32.def
+compiling bootsnap.c
+bootsnap.c: In function 'bs_cache_path':
+bootsnap.c:274:3: warning: unknown conversion type character 'l' in format [-Wformat]
+bootsnap.c:274:3: warning: too many arguments for format [-Wformat-extra-args]
+bootsnap.c: In function 'bs_rb_fetch':
+bootsnap.c:315:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+bootsnap.c: In function 'fetch_cached_data':
+bootsnap.c:439:3: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+bootsnap.c: In function 'atomic_write_cache_file':
+bootsnap.c:512:5: warning: implicit declaration of function 'mkstemp' [-Wimplicit-function-declaration]
+bootsnap.c: In function 'bs_rb_fetch':
+bootsnap.c:666:13: warning: 'output_data' may be used uninitialized in this function [-Wmaybe-uninitialized]
+bootsnap.c:637:9: note: 'output_data' was declared here
+linking shared-object bootsnap/bootsnap.so
+bootsnap.o: In function `atomic_write_cache_file':
+C:\Projects\Toyshand\Toyshand\vendor\bundle\ruby\2.3.0\gems\bootsnap-1.4.8\ext\bootsnap/bootsnap.c:512: undefined reference to `mkstemp'
+collect2.exe: error: ld returned 1 exit status
+make: *** [bootsnap.so] Error 1
+
+make failed, exit code 2

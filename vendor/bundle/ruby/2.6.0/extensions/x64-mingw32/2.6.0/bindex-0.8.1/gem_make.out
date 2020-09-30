@@ -1,0 +1,16 @@
+current directory: C:/Projects/Toyshand/Toyshand/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+C:/Ruby26-x64/bin/ruby.exe -I C:/Ruby26-x64/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200929-13640-1mfjc17.rb extconf.rb
+creating Makefile
+
+current directory: C:/Projects/Toyshand/Toyshand/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: C:/Projects/Toyshand/Toyshand/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+generating cruby-x64-mingw32.def
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: C:/Projects/Toyshand/Toyshand/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200929-13640-lal2y1/skiptrace/internal
