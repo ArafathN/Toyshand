@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @toy.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @toy.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @toy.price %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @toy.availability %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @toy.condition %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @toy.category %>
+</p>
+
+<%= link_to 'Edit', edit_toy_path(@toy) %> |
+<%= link_to 'Back', toys_path %>
