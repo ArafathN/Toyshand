@@ -1,34 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @toy.name %>
-</p>
+<div class="row"></div>
+<div class="col-md-6">
+  <%= image_tag "Tracteur.jpg", class: "img-responsive" %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @toy.description %>
-</p>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @toy.price %>
-</p>
+<div class="col-md-6">
+<h3><%= @toy.name %></h3>
+<p><%= @toy.description %></p>
+<p><%= @toy.category %></p>
+<p><%= @toy.condition %></p>
+<p class="text-center"><strong><%= @toy.price/100 %>€</strong></p>
 
-<p>
-  <strong>Availability:</strong>
-  <%= @toy.availability %>
-</p>
+</div>
+</div>
 
-<p>
-  <strong>Condition:</strong>
-  <%= @toy.condition %>
-</p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @toy.category %>
-</p>
 
 <%= link_to 'Edit', edit_toy_path(@toy) %> |
 <%= link_to 'Back', toys_path %>
