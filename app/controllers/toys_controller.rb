@@ -4,7 +4,7 @@ class ToysController < ApplicationController
   # GET /toys
   # GET /toys.json
   def index
-    @toys = Toy.all
+    @toys = Toy.all.where(availability:true)
   end
 
   # GET /toys/1
