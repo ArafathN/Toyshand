@@ -30,6 +30,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'cancan'
 gem "paperclip", "~> 6.0.0"
+gem 'dotenv-rails', groups: [:development]
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
