@@ -1,9 +1,43 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our toys</h1>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col">
+      <% if @query %>
+        <p>You searched for <strong><%= @query %></strong>. We found <%= @toys.count %> toys out of our <%= Toy.count %> on our website.</p>
+      <% else %>
+        <p>All <%= Toy.count %> toys.</p>
+      <% end %>
+    </div>
+  </div>
 
-<div class="row">
- <%= render @toys %>
- 
+  <div class="row">
+    <% @toys.each do |toy| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="toy-card">
+          <div class="toy-card-image" style="background-image: url('<%= toy.picture_url %>')"></div>
+          <div class="toy-card-content">
+            <div class="toy-card-title">
+              <h4><%= toy.name %></h4>
+             
+            </div>
+           
+            <div class="flex">
+              <div class="flex ml-3">
+                <i class="material-icons mr-2">€</i> <%= toy.price %>
+              </div>
+            </div>
+            <p>Condition: <%= toy.condition %></p>
+          </div>
+          <div class="toy-card-actions">
+            <%= link_to 'More info', toy_path(toy) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<br>
-<%= link_to 'New Toy', new_toy_path %>

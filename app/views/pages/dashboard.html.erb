@@ -5,34 +5,14 @@
     <h3>Toys
     <%= link_to "New Toy", new_toy_path, class: 'btn btn-warning btn-sm' %>
     </h3>
-    <table class="table table-condensed">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Available</th>
-          <th></th>
-          
-        </tr>
-      </thead>
-      <tbody>
-      <% @toys.each do |toy| %>
-        <tr>
-          <td><%= toy.id %></td>
-          <td><%=link_to toy.name, toy_path(toy) %></td>
-          <td><%= toy.availability %></td>
-          <td><%= link_to 'Edit', edit_toy_path(toy) %></td>
-        </tr>  
-        <% end %>
-      </tbody>
-    </table>
+    <%= render 'toys' %>
     </div>
 
     <div class="col-md-4">
-    <h3>Purchases</h3>
+    <h3>Achats</h3>
     </div>
 
     <div class="col-md-4">
-    <h3>Sales</h3>
+    <h3>Ventes</h3>
     </div>
 </div>

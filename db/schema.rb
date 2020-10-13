@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_01_152224) do
+ActiveRecord::Schema.define(version: 2020_10_13_082432) do
+
+  create_table "sales", force: :cascade do |t|
+    t.string "buyer_email"
+    t.string "seller_email"
+    t.integer "amount"
+    t.string "uuid"
+    t.integer "toy_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "toys", force: :cascade do |t|
     t.string "name"
@@ -26,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_10_01_152224) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.string "picture_url"
   end
 
   create_table "users", force: :cascade do |t|

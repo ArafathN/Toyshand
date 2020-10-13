@@ -1,0 +1,25 @@
+<table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th></th>
+          
+        </tr>
+      </thead>
+      <tbody>
+      <% @toys.each do |toy| %>
+        <tr>
+          <td><%= toy.id %></td>
+          <td><%=link_to toy.name, toy_path(toy) %></td>
+          <td><%= toy.availability %></td>
+          <td><%= link_to 'Edit', edit_toy_path(toy) %></td>
+          <td><%= link_to "Remove", toy_path(toy),
+          method: :delete, 
+          data: { confirm: "Are you sure?" },
+          class: 'ml-3 text-danger'
+      %></td>
+        </tr>  
+        <% end %>
+      </tbody>
+    </table>

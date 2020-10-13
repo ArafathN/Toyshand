@@ -1,22 +1,33 @@
 
-
 <div class="row"></div>
 <div class="col-md-6">
-  <%= image_tag "Tracteur.jpg", class: "img-responsive" %>
+
+<div class="map" style="background-image: url('<%= @toy.picture_url %>')"></div>
 
 </div>
 
 <div class="col-md-6">
 <h3><%= @toy.name %></h3>
-<p><%= @toy.description %></p>
-<p><%= @toy.category %></p>
-<p><%= @toy.condition %></p>
+<p>Condition: <%= @toy.condition %></p>
+
+
 <p class="text-center"><strong><%= @toy.price/100 %>€</strong></p>
 
 </div>
+</div>
+<br>
+<br>
+<div class="row">
+<div class="col-12 col-md-6">
+<p>Details</p>
+  <h4><%= @toy.description %></h4>
+  <p>Condition: <%= @toy.condition %><p>
+  <p>Category: <%= @toy.category %></p>
+  </div>  
 </div>
 
 
 
 <%= link_to 'Edit', edit_toy_path(@toy) %> |
 <%= link_to 'Back', toys_path %>
+
