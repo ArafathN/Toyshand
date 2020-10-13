@@ -220,6 +220,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stripe (5.26.0)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
     thor (1.0.1)
@@ -270,6 +271,7 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   sqlite3
+  stripe
   turbolinks (~> 5)
   twitter-bootstrap-rails!
   tzinfo-data

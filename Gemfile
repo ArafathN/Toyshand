@@ -32,6 +32,7 @@ gem 'cancan'
 gem "paperclip", "~> 6.0.0"
 gem 'dotenv-rails', groups: [:development]
 gem 'font_awesome5_rails'
+gem 'stripe'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
