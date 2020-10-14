@@ -1,33 +1,27 @@
 
-<div class="row"></div>
+<div class="row">
 <div class="col-md-6">
 
-<div class="map" style="background-image: url('<%= @toy.picture_url %>')"></div>
-
-</div>
 
 <div class="col-md-6">
 <h3><%= @toy.name %></h3>
 <p>Condition: <%= @toy.condition %></p>
-
-
 <p class="text-center"><strong><%= @toy.price/100 %>€</strong></p>
 
+<% if current_user %>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="<%= @toy.name %>"
+            data-name = "Toyshand"
+            data-amount="<%= @toy.price %>"
+            data-email= "<%= current_user.email %>"
+            data-locale="auto">
+  </script>
+ 
+<% else %>
+<p>Please log in to purchase this toy</p>
+
+<% end %>
 </div>
 </div>
-<br>
-<br>
-<div class="row">
-<div class="col-12 col-md-6">
-<p>Details</p>
-  <h4><%= @toy.description %></h4>
-  <p>Condition: <%= @toy.condition %><p>
-  <p>Category: <%= @toy.category %></p>
-  </div>  
-</div>
-
-
-
-<%= link_to 'Edit', edit_toy_path(@toy) %> |
-<%= link_to 'Back', toys_path %>
-

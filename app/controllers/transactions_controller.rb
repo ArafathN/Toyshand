@@ -1,14 +1,14 @@
 class TransactionsController < ApplicationController
 
     def create
-        toy = toy.find_by!(slug:params[:slug])
+        toy = Toy.find_by!(slug:params[:slug])
         token = params[:stripeToken]
-    end
 
     begin
         charge = Stripe::Charge.create(
-            amount: toy.price
-            currency: "eur"
+            amount: toy.price,
+            currency: "eur",
+            card: token,
             description: current_user.email
             )
 

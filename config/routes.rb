@@ -2,12 +2,14 @@ Rails.application.routes.draw do
 
   resources :toys
   devise_for :users 
-  devise_scope :user do  
-    get '/users/sign_out' => 'devise/sessions#destroy'  
-    get 'dashboard' => 'pages#dashboard'   
- end
-  
-
   root 'pages#home'
+ 
+    get 'dashboard' => 'pages#dashboard'   
+ 
+
+  
+ post '/buy/:slug', to:'transactions#create', as: :buy
+ get '/pickup/:uuid', to: 'transactions#pickup', as: :pickup
+  
 
 end
