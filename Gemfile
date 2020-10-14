@@ -34,6 +34,7 @@ gem 'dotenv-rails', groups: [:development]
 gem 'font_awesome5_rails'
 gem 'stripe'
 gem 'friendly_id', '~> 5.4.0'
+gem 'aasm'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
