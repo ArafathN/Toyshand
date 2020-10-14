@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
 
     def create
-        toy = Toy.find_by!(slug:params[:slug])
+        toy = Toy.find_by!(slug: params[:slug])
         token = params[:stripeToken]
 
     begin
@@ -26,6 +26,4 @@ class TransactionsController < ApplicationController
         @sale = Sale.find_by!(uuid: params[:uuid])
         @toy = @sale.toy
     end
-
-
 end
