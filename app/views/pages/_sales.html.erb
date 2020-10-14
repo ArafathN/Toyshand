@@ -3,15 +3,17 @@
         <tr>
           <th>Name</th>
           <th>Date</th>
+          <th>Buyer</th>
           <th></th>
           
         </tr>
       </thead>
       <tbody>
-      <% @purchased.each do |sale| %>
+      <% @sales.each do |sale| %>
         <tr>
           <td><%= link_to sale.toy.name, pickup_path(sale.uuid) %></td>
           <td><%= time_ago_in_words(sale.created_at) %> ago</td>
+          <td><%= sale.buyer_email %></td>
         </tr>  
         <% end %>
       </tbody>
