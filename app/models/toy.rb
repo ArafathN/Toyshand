@@ -7,5 +7,5 @@ class Toy < ApplicationRecord
     has_attached_file :image
 
     validates_numericality_of :price,
-    greater_than: 49, message: "Price must be atleast 50 cents"
+    greater_than: 1, message: "Price must be atleast 1 euro"
 end

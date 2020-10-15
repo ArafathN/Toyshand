@@ -12,7 +12,7 @@ class TransactionsController < ApplicationController
         if sale.finished?
             redirect_to pickup_url(uuid: sale.uuid)
         else
-            redirect_to toy_path(toy), notice: e.message
+            redirect_to toy_path(toy), notice: f.message
         end
     end
 

@@ -11,7 +11,7 @@
       <% @purchased.each do |sale| %>
         <tr>
           <td><%= link_to sale.toy.name, pickup_path(sale.uuid) %></td>
-          <td><%= time_ago_in_words(sale.created_at) %> ago</td>
+          <td><%= time_ago_in_words(sale.created_at) %>ago</td>
         </tr>  
         <% end %>
       </tbody>
